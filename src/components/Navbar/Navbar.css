@@ -81,7 +81,7 @@
   font-weight: 500;
   /* transition: all 0.3s ease; */
   font-size: 0.9rem;
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .navbar-resume-button:hover {
