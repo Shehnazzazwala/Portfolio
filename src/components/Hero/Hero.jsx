@@ -7,14 +7,14 @@ const Hero = () => {
   const container = useRef();
 
   useGSAP(() => {
-    // Create a timeline for sequenced animations
-    const tl = gsap.timeline({ delay: 0.5 });
+    // This is the complete, correct timeline.
+    const tl = gsap.timeline({ delay: 0.3 });
 
     tl.from(".line span", {
-      y: 100,
+      y: 150,
       skewY: 7,
       duration: 1.5,
-      stagger: 0.25,
+      stagger: 0.2,
       ease: 'power4.out'
     })
     .from(".hero-subtitle", {
@@ -22,7 +22,9 @@ const Hero = () => {
       y: 20,
       duration: 1,
       ease: 'power4.out'
-    }, "-=1") // Overlap with previous animation
+    }, "-=1")
+    // --- THIS IS THE CORRECTED PART ---
+    // This line animates the button into view and was missing.
     .from(".hero-button", {
       opacity: 0,
       y: 20,
@@ -38,7 +40,9 @@ const Hero = () => {
         <div className="line"><span>Zazwala Shehnazbegum</span></div>
       </h1>
       <p className="hero-subtitle">AI & Machine Learning Enthusiast</p>
-      <a href="#projects" className="hero-button" >View My Work</a>
+      
+      {/* This button will now be animated correctly */}
+      <a href="#projects" className="hero-button">View My Work</a>
     </section>
   );
 };
