@@ -1,0 +1,89 @@
+/* src/components/Navbar/Navbar.css */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease-out;
+}
+
+/* This class gets added on scroll */
+.navbar.scrolled {
+  background: rgba(253, 251, 248, 0.85); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.navbar-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.navbar-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--primary-accent);
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.navbar-link:hover {
+  color: var(--primary-accent);
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-accent);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.navbar-resume-button {
+  padding: 8px 16px;
+  border: 1px solid var(--primary-accent);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--primary-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.navbar-resume-button:hover {
+  background-color: var(--primary-accent);
+  color: white;
+}

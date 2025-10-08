@@ -1,0 +1,64 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  /* Nude & Earthy Color Palette */
+  --bg-color: #FDFBF8;         /* Creamy Off-White */
+  --font-color: #4A4A4A;       /* Dark Charcoal */
+  --card-bg: #FFFFFF;         /* Clean White */
+  --primary-accent: #E07A5F;   /* Terracotta */
+  --secondary-accent: #F4F1DE; /* Light Beige for backgrounds */
+  --subtle-stroke: #EAEAEA;   /* Light Grey for borders */
+  --shadow-color: rgba(0, 0, 0, 0.08);
+
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 100px 0;
+  overflow-x: hidden;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: var(--font-color);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+/* Elegant underline for section titles */
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-accent);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}

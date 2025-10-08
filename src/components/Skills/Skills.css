@@ -1,0 +1,64 @@
+/* src/components/Skills/Skills.css */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.skills-category {
+  background-color: var(--card-bg);
+  border: 1px solid var(--subtle-stroke);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -10px var(--shadow-color);
+}
+
+.skills-category h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--font-color);
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  border-bottom: 2px solid var(--secondary-accent);
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills-category h3::before {
+  content: '⚙️';
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-item {
+  /* --- THE FIX IS HERE --- */
+  color: var(--font-color); /* This line explicitly sets the text color */
+  
+  background-color: var(--bg-color);
+  border: 1px solid var(--subtle-stroke);
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-item:hover {
+  background-color: var(--primary-accent);
+  color: white;
+  border-color: var(--primary-accent);
+}

@@ -1,0 +1,36 @@
+/* src/components/Footer/Footer.css */
+.footer {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+
+.footer-socials {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-socials a {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--primary-accent);
+  transform: translateY(-5px);
+}
+
+.footer-content p {
+  font-size: 0.9rem;
+}

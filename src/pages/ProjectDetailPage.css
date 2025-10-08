@@ -1,0 +1,92 @@
+/* src/pages/ProjectDetailPage.css */
+.project-detail-container {
+  padding-top: 120px; /* Space for the fixed navbar */
+  padding-bottom: 100px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-detail-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.project-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.project-header-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-link-button {
+  padding: 10px 20px;
+  border: 1px solid var(--primary-accent);
+  border-radius: 4px;
+  color: var(--primary-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-link-button:hover {
+  background-color: var(--primary-accent);
+  color: white;
+}
+
+.project-section {
+  margin-bottom: 3rem;
+}
+
+.project-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--font-color);
+  border-bottom: 2px solid var(--secondary-accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-section h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-accent);
+  margin-bottom: 0.5rem;
+}
+
+.project-section p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.tech-stack-section .project-tech-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tech-stack-section .project-tech-list li {
+  background-color: var(--secondary-accent);
+  color: var(--font-color);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.back-link {
+  font-weight: 600;
+  color: var(--primary-accent);
+  text-decoration: none;
+}
+
+.project-not-found {
+  padding-top: 120px;
+  text-align: center;
+}

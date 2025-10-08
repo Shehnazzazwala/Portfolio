@@ -1,0 +1,55 @@
+/* src/components/Hero/Hero.css */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  color: var(--font-color);
+}
+
+.line {
+  overflow: hidden;
+  padding-bottom: 0.2em;
+}
+
+.line span {
+  display: block;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--primary-accent);
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 2px solid var(--font-color);
+  border-radius: 50px; /* Pill-shaped button */
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  
+  /* GSAP will animate this from 0 to 1 */
+  opacity: 0;
+}
+
+.hero-button:hover {
+  background-color: transparent;
+  color: var(--font-color);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -10px var(--shadow-color);
+}
