@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './ScrollToTop'; // <-- Import the utility
+import CustomCursor from './components/CustomCursor/CustomCursor';
 
 // Import Page Components
 import HomePage from './pages/HomePage';
@@ -13,6 +14,7 @@ import ProjectDetailPage from './pages/ProjectDetailPage';
 function App() {
   return (
     <BrowserRouter>
+    <CustomCursor />
       <ScrollToTop /> {/* <-- Add this to handle scroll position */}
       <Navbar />
       <main>

@@ -1,9 +1,14 @@
-/* src/components/Hero/Hero.css */
 .hero-section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* --- NEW: Wrapper for positioning --- */
+.hero-title-container {
+  position: relative;
+  display: inline-block; /* Makes the container only as wide as its content */
 }
 
 .hero-title {
@@ -24,6 +29,16 @@
   display: block;
 }
 
+/* --- NEW: Styles for the sticker --- */
+.hero-sticker {
+  position: absolute;
+  top: -10px;
+  right: -60px; /* Positions it to the right of the title */
+  width: 120px; /* Adjust size as needed */
+  height: auto;
+  z-index: 10;
+}
+
 .hero-subtitle {
   font-size: clamp(1.1rem, 3vw, 1.5rem);
   color: var(--primary-accent);
@@ -35,16 +50,13 @@
   display: inline-block;
   padding: 14px 28px;
   border: 2px solid var(--font-color);
-  border-radius: 50px; /* Pill-shaped button */
+  border-radius: 50px;
   background-color: var(--font-color);
   color: var(--bg-color);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
-  
-  /* GSAP will animate this from 0 to 1 */
-  opacity: 0;
 }
 
 .hero-button:hover {
@@ -52,4 +64,19 @@
   color: var(--font-color);
   transform: translateY(-3px);
   box-shadow: 0 10px 20px -10px var(--shadow-color);
+}
+
+/* --- NEW: Responsive styles for the sticker --- */
+@media (max-width: 768px) {
+  .hero-sticker {
+    width: 80px; /* Make it smaller on tablets */
+    top: -5px;
+    right: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-sticker {
+    display: none; /* Hide it completely on small mobile screens */
+  }
 }

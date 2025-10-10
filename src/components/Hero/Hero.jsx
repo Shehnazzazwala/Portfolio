@@ -7,7 +7,7 @@ const Hero = () => {
   const container = useRef();
 
   useGSAP(() => {
-    // This is the complete, correct timeline.
+    // The main timeline for the text and button
     const tl = gsap.timeline({ delay: 0.3 });
 
     tl.from(".line span", {
@@ -23,8 +23,6 @@ const Hero = () => {
       duration: 1,
       ease: 'power4.out'
     }, "-=1")
-    // --- THIS IS THE CORRECTED PART ---
-    // This line animates the button into view and was missing.
     .from(".hero-button", {
       opacity: 0,
       y: 20,
@@ -32,17 +30,43 @@ const Hero = () => {
       ease: 'power4.out'
     }, "-=0.7");
 
+    // --- NEW ANIMATION FOR THE STICKER ---
+    // 1. The initial "pop-in" animation
+    gsap.from(".hero-sticker", {
+      delay: 1.5, // Appears after the name is revealed
+      duration: 1,
+      scale: 0,
+      opacity: 0,
+      rotation: -90,
+      ease: 'elastic.out(1, 0.5)'
+    });
+    
+    // 2. The continuous "floating" animation
+    gsap.to(".hero-sticker", {
+      y: -20, // Moves up and down by 20px
+      rotation: 5, // Adds a slight wobble
+      duration: 3,
+      repeat: -1, // Repeats forever
+      yoyo: true, // Reverses the animation smoothly
+      ease: 'sine.inOut',
+      delay: 2.5 // Starts after the pop-in
+    });
+
   }, { scope: container });
 
   return (
     <section id="hero" ref={container} className="hero-section">
-      <h1 className="hero-title">
-        <div className="line"><span>Zazwala Shehnazbegum</span></div>
-      </h1>
-      <p className="hero-subtitle">AI & Machine Learning Enthusiast</p>
-      
-      {/* This button will now be animated correctly */}
-      <a href="#projects" className="hero-button">View My Work</a>
+      {/* New wrapper for positioning */}
+      <div className="hero-title-container">
+        <h1 className="hero-title">
+          <div className="line"><span>Zazwala Shehnazbegum</span></div>
+        </h1>
+        {/* The new sticker image */}
+        <img src="/skincare.png" alt="Skincare sticker" className="hero-sticker" />
+      </div>
+
+      <p className="hero-subtitle">Software Developer | AI & Machine Learning Enthusiast</p>
+      <a href="/#projects" className="hero-button">View My Work</a>
     </section>
   );
 };

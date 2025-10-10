@@ -1,0 +1,35 @@
+/* src/components/CustomCursor/CustomCursor.css */
+.custom-cursor {
+  position: fixed; /* Stays on screen */
+  top: 0;
+  left: 0;
+  width: 32px; /* The size of your cursor */
+  height: 32px;
+  z-index: 9999; /* Stays on top of everything */
+  
+  /* THIS IS CRUCIAL: Makes clicks go "through" the cursor */
+  pointer-events: none;
+  
+  /* Center the image inside the div */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* GSAP will control the position, so we set transform origins */
+  transform-origin: center center;
+  
+  /* Hides the cursor on touch devices where JS will add display:none */
+  display: block;
+}
+
+.custom-cursor img {
+  width: 100%;
+  height: auto;
+}
+
+/* On touch devices, we don't want a custom cursor */
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
