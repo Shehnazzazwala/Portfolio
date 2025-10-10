@@ -52,7 +52,7 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   
   /* --- THIS IS THE FIX --- */
   /* This tells the button NOT to stretch to the full width. */
