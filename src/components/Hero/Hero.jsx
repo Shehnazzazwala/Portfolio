@@ -65,7 +65,7 @@ const Hero = () => {
         <img src="/skincare.png" alt="Skincare sticker" className="hero-sticker" />
       </div>
 
-      <p className="hero-subtitle">Software Developer | AI & Machine Learning Enthusiast</p>
+      <p className="hero-subtitle">AI , Data Science& Machine Learning Enthusiast</p>
       <a href="/#projects" className="hero-button">View My Work</a>
     </section>
   );
