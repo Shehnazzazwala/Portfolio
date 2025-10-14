@@ -1,20 +1,25 @@
 /* src/pages/ProjectDetailPage.css */
-.project-detail-container {
-  padding-top: 120px; /* Space for the fixed navbar */
+.project-detail-page {
+  padding-top: 120px;
   padding-bottom: 100px;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .project-detail-header {
   text-align: center;
-  margin-bottom: 4rem;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
 }
 
 .project-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 1rem;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.project-subtitle {
+  font-size: 1.2rem;
+  color: var(--primary-accent);
+  margin-bottom: 2rem;
 }
 
 .project-header-links {
@@ -38,32 +43,48 @@
   color: white;
 }
 
+/* Hero Image Styling */
+.project-hero-image-container {
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--subtle-stroke);
+  box-shadow: 0 10px 30px -10px var(--shadow-color);
+}
+
+.project-hero-image {
+  width: 100%;
+  display: block;
+}
+
+/* Main Body Content Styling */
+.project-detail-body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .project-section {
   margin-bottom: 3rem;
 }
 
 .project-section h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--font-color);
   border-bottom: 2px solid var(--secondary-accent);
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
-}
-
-.project-section h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--primary-accent);
-  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
 }
 
 .project-section p {
   line-height: 1.8;
   font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
-.tech-stack-section .project-tech-list {
+.project-tech-list-detail {
   list-style: none;
   padding: 0;
   display: flex;
@@ -71,7 +92,7 @@
   gap: 0.75rem;
 }
 
-.tech-stack-section .project-tech-list li {
+.project-tech-list-detail li {
   background-color: var(--secondary-accent);
   color: var(--font-color);
   padding: 8px 15px;
@@ -80,12 +101,44 @@
   font-weight: 500;
 }
 
+.key-features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.key-features-list li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.feature-icon {
+  color: var(--primary-accent);
+  font-weight: bold;
+}
+
+.learnings-section {
+  background-color: var(--secondary-accent);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--primary-accent);
+}
+
+.learnings-section p {
+  margin: 0;
+  font-style: italic;
+}
+
 .back-link {
   font-weight: 600;
   color: var(--primary-accent);
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
+/* Not Found Page */
 .project-not-found {
   padding-top: 120px;
   text-align: center;
